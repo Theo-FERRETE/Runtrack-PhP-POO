@@ -7,8 +7,6 @@ class Student {
     private $credits;
     private $level;
 
-    // initialise nom, prénom, numéro d'étudiant et les crédits (par défaut à 0)
-    // Le niveau  est initialisé grâce à la méthode studentEval() 
     public function __construct($nom, $prenom, $studentNumber) {
         $this->nom = $nom;
         $this->prenom = $prenom;
@@ -17,8 +15,6 @@ class Student {
         $this->updateLevel();
     }
 
-    // Mutateur pour ajouter des crédits
-    // S'assure que la valeur passée est supérieure à zéro avant de l'ajouter
     public function add_credits($creditsToAdd) {
         if ($creditsToAdd > 0) {
             $this->credits += $creditsToAdd;
@@ -29,7 +25,6 @@ class Student {
         }
     }
 
-    // Accesseur pour obtenir le nombre total de crédits
     public function getCredits() {
         return $this->credits;
     }
